@@ -1,0 +1,250 @@
+.page {
+    min-height: calc(100vh - 80px);
+}
+
+.page-hero {
+    background: var(--gradient-primary);
+    padding: var(--space-20) 0 var(--space-16);
+    text-align: center;
+    color: var(--color-white);
+}
+
+.page-hero h1 {
+    color: var(--color-white);
+    font-size: var(--text-6xl);
+    margin-bottom: var(--space-4);
+}
+
+.lead {
+    font-size: var(--text-2xl);
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.content-section {
+    margin-bottom: var(--space-12);
+}
+
+.content-section h2 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-6);
+    color: var(--color-secondary);
+}
+
+.content-section p {
+    font-size: var(--text-lg);
+    line-height: 1.8;
+    color: var(--color-gray-700);
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: var(--space-3) 0;
+    font-size: var(--text-lg);
+    color: var(--color-gray-700);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.stat-card {
+    text-align: center;
+    padding: var(--space-8);
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-card h3 {
+    font-size: var(--text-5xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+}
+
+.stat-card p {
+    color: var(--color-gray-600);
+    font-size: var(--text-base);
+}
+
+/* Contact Page */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-12);
+    align-items: start;
+}
+
+.contact-info h2 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-4);
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.contact-method {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+}
+
+.contact-method-icon {
+    font-size: var(--text-3xl);
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.contact-method h4 {
+    margin-bottom: var(--space-1);
+    font-size: var(--text-lg);
+}
+
+.contact-method p,
+.contact-method a {
+    color: var(--color-gray-600);
+    font-size: var(--text-base);
+}
+
+/* Contact Form */
+.contact-form {
+    padding: var(--space-8);
+}
+
+.form-group {
+    margin-bottom: var(--space-5);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-weight: 600;
+    color: var(--color-gray-700);
+    font-size: var(--text-sm);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    font-family: var(--font-primary);
+    transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.success-message {
+    margin-top: var(--space-4);
+    padding: var(--space-4);
+    background: rgba(39, 174, 96, 0.1);
+    border: 2px solid #27AE60;
+    border-radius: var(--radius-md);
+    color: #27AE60;
+    font-weight: 600;
+}
+
+/* Service Pages */
+.service-hero {
+    background: var(--gradient-secondary);
+    padding: var(--space-20) 0 var(--space-16);
+    text-align: center;
+    color: var(--color-white);
+}
+
+.service-hero h1 {
+    color: var(--color-white);
+    font-size: var(--text-6xl);
+    margin-bottom: var(--space-4);
+}
+
+.service-icon-large {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto var(--space-6);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-6xl);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+}
+
+.benefit-card {
+    padding: var(--space-6);
+    background: var(--color-gray-50);
+    border-radius: var(--radius-lg);
+}
+
+.benefit-card h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    color: var(--color-primary);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .page-hero h1,
+    .service-hero h1 {
+        font-size: var(--text-4xl);
+    }
+
+    .lead {
+        font-size: var(--text-lg);
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
