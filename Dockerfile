@@ -5,12 +5,16 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files and install dependencies
+# Copy package files
 COPY package*.json ./
-RUN npm ci --only=production
 
-# Copy source code and build
+# Install ALL dependencies (including dev dependencies needed for build)
+RUN npm ci
+
+# Copy source code
 COPY . .
+
+# Build the application
 RUN npm run build
 
 # Stage 2: Production - Serve with Nginx
