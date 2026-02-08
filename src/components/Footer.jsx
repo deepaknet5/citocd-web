@@ -13,7 +13,7 @@ function Footer() {
                     <div className="footer-section">
                         <img src="/assets/logo.png" alt="CITOCD" className="footer-logo" />
                         <p className="footer-description">
-                            Revolutionizing DevOps with cutting-edge CI/CD solutions, cloud migration, and innovative business automation.
+                            Revolutionizing DevOps with cutting-edge CI/CD solutions, cloud infrastructure, AI-powered automation, and security-first DevSecOps practices.
                         </p>
                         <div className="social-links">
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
@@ -34,27 +34,25 @@ function Footer() {
                         </div>
                     </div>
 
-                    {/* Services */}
+                    {/* DevOps & Cloud Services */}
                     <div className="footer-section">
-                        <h4>Services</h4>
+                        <h4>DevOps & Cloud Services</h4>
                         <ul>
                             <li><Link to="/services/cloud-migration">Cloud Migration</Link></li>
                             <li><Link to="/services/application-modernization">Application Modernization</Link></li>
                             <li><Link to="/services/advanced-automation">Advanced Automation</Link></li>
-                            <li><Link to="/services/payment-integration">Payment Integration</Link></li>
-                            <li><Link to="/services/healthcare-solutions">Healthcare Solutions</Link></li>
+                            <li><Link to="/services/ai-powered-devops">AI-Powered DevOps</Link></li>
+                            <li><Link to="/services/devsecops">DevSecOps</Link></li>
                         </ul>
                     </div>
 
-                    {/* Solutions */}
+                    {/* Company */}
                     <div className="footer-section">
-                        <h4>Solutions</h4>
+                        <h4>Company</h4>
                         <ul>
-                            <li><Link to="/services/whatsapp-marketing">WhatsApp Marketing</Link></li>
-                            <li><Link to="/services/attendance-systems">Attendance Systems</Link></li>
-                            <li><Link to="/services/lms-solutions">LMS Solutions</Link></li>
-                            <li><Link to="/clients">Our Clients</Link></li>
                             <li><Link to="/about">About Us</Link></li>
+                            <li><Link to="/clients">Our Clients</Link></li>
+                            <li><Link to="/contact">Contact Us</Link></li>
                         </ul>
                     </div>
 

@@ -19,7 +19,7 @@ NC='\033[0m' # No Color
 # Configuration
 CONTAINER_NAME="citocd-web"
 IMAGE_NAME="citocd-web:latest"
-PORT=${PORT:-8080}
+PORT=${PORT:-3004}
 
 # Function to print colored output
 print_success() {

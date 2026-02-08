@@ -1,9 +1,14 @@
+import { Link } from 'react-router-dom'
+import { FaArrowLeft } from 'react-icons/fa'
 import '../SharedPages.css'
 
 export function createServicePage(config) {
   return function ServicePage() {
     return (
       <div className="page">
+        <Link to="/services" className="back-button" aria-label="Back to services">
+          <FaArrowLeft />
+        </Link>
         <div className="service-hero">
           <div className="container">
             <div className="service-icon-large">{config.icon}</div>

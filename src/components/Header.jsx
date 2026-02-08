@@ -39,7 +39,7 @@ function Header() {
                             </button>
 
                             <div className={`dropdown-menu ${isServicesOpen ? 'dropdown-open' : ''}`}>
-                                <h4 className="dropdown-header">DevOps & Cloud</h4>
+                                <h4 className="dropdown-header">DevOps & Cloud Services</h4>
                                 <NavLink to="/services/cloud-migration" onClick={closeMobileMenu}>
                                     Cloud Migration
                                 </NavLink>
@@ -49,23 +49,11 @@ function Header() {
                                 <NavLink to="/services/advanced-automation" onClick={closeMobileMenu}>
                                     Advanced Automation
                                 </NavLink>
-
-                                <div className="dropdown-divider"></div>
-                                <h4 className="dropdown-header">Business Solutions</h4>
-                                <NavLink to="/services/payment-integration" onClick={closeMobileMenu}>
-                                    Payment Integration
+                                <NavLink to="/services/ai-powered-devops" onClick={closeMobileMenu}>
+                                    AI-Powered DevOps
                                 </NavLink>
-                                <NavLink to="/services/healthcare-solutions" onClick={closeMobileMenu}>
-                                    Healthcare Solutions
-                                </NavLink>
-                                <NavLink to="/services/whatsapp-marketing" onClick={closeMobileMenu}>
-                                    WhatsApp Marketing
-                                </NavLink>
-                                <NavLink to="/services/attendance-systems" onClick={closeMobileMenu}>
-                                    Attendance Systems
-                                </NavLink>
-                                <NavLink to="/services/lms-solutions" onClick={closeMobileMenu}>
-                                    LMS Solutions
+                                <NavLink to="/services/devsecops" onClick={closeMobileMenu}>
+                                    DevSecOps
                                 </NavLink>
                             </div>
                         </div>

@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
-    FaCloud, FaRocket, FaCog, FaCreditCard, FaHospital,
-    FaWhatsapp, FaMapMarkerAlt, FaGraduationCap, FaChartLine,
-    FaShieldAlt, FaClock, FaUsers
+    FaCloud, FaRocket, FaCog, FaBrain, FaShieldAlt,
+    FaChartLine, FaClock, FaUsers
 } from 'react-icons/fa'
 import './Home.css'
 
@@ -12,58 +11,37 @@ function Home() {
         {
             icon: <FaCloud />,
             title: 'Cloud Migration',
-            description: 'Seamless migration to AWS, Azure, and Google Cloud with zero downtime.',
+            description: 'Seamless migration to AWS, Azure, and Google Cloud with zero downtime and optimized costs.',
             link: '/services/cloud-migration',
             color: '#3498DB'
         },
         {
             icon: <FaRocket />,
             title: 'Application Modernization',
-            description: 'Transform legacy systems into modern, scalable cloud-native applications.',
+            description: 'Transform legacy systems into modern, scalable cloud-native microservices architectures.',
             link: '/services/application-modernization',
             color: '#9B59B6'
         },
         {
             icon: <FaCog />,
             title: 'Advanced Automation',
-            description: ' Streamline workflows with CI/CD pipelines and intelligent automation.',
+            description: 'Streamline workflows with CI/CD pipelines, Infrastructure as Code, and intelligent automation.',
             link: '/services/advanced-automation',
             color: '#E67E22'
         },
         {
-            icon: <FaCreditCard />,
-            title: 'Payment Integration',
-            description: 'Secure payment gateways with multi-currency and compliance support.',
-            link: '/services/payment-integration',
+            icon: <FaBrain />,
+            title: 'AI-Powered DevOps',
+            description: 'Intelligent automation, predictive analytics, and self-healing systems using AI/ML.',
+            link: '/services/ai-powered-devops',
+            color: '#8E44AD'
+        },
+        {
+            icon: <FaShieldAlt />,
+            title: 'DevSecOps',
+            description: 'Security-first approach with automated testing, compliance, and zero-trust architecture.',
+            link: '/services/devsecops',
             color: '#27AE60'
-        },
-        {
-            icon: <FaHospital />,
-            title: 'Healthcare Solutions',
-            description: 'Complete clinic and hospital management with patient care systems.',
-            link: '/services/healthcare-solutions',
-            color: '#E74C3C'
-        },
-        {
-            icon: <FaWhatsapp />,
-            title: 'WhatsApp Marketing',
-            description: 'Engage customers with WhatsApp Business API and automated campaigns.',
-            link: '/services/whatsapp-marketing',
-            color: '#25D366'
-        },
-        {
-            icon: <FaMapMarkerAlt />,
-            title: 'Attendance Systems',
-            description: 'Geo-location based attendance tracking with real-time monitoring.',
-            link: '/services/attendance-systems',
-            color: '#F39C12'
-        },
-        {
-            icon: <FaGraduationCap />,
-            title: 'LMS Solutions',
-            description: 'Comprehensive learning management systems for corporate and education.',
-            link: '/services/lms-solutions',
-            color: '#16A085'
         }
     ]
 
@@ -71,32 +49,32 @@ function Home() {
         {
             icon: <FaChartLine />,
             title: 'Cloud Agility',
-            description: 'Multicloud support ensuring scalability, flexibility, and cost optimization.'
+            description: 'Multi-cloud support ensuring scalability, flexibility, and cost optimization.'
         },
         {
             icon: <FaUsers />,
-            title: 'Collaborative Solutions',
-            description: 'Seamless team communication with integrated workflows and tools.'
+            title: 'Collaborative DevOps',
+            description: 'Seamless team collaboration with integrated workflows and automated communication.'
         },
         {
             icon: <FaCog />,
-            title: 'Innovative Automation',
-            description: 'Advanced strategies that streamline workflows and eliminate redundancies.'
+            title: 'Intelligent Automation',
+            description: 'AI-powered automation that streamlines workflows and eliminates manual tasks.'
         },
         {
             icon: <FaClock />,
             title: 'Faster Time-to-Market',
-            description: 'Accelerate product delivery with automated CI/CD pipelines.'
+            description: 'Accelerate product delivery with automated CI/CD pipelines and DevOps best practices.'
         },
         {
             icon: <FaRocket />,
             title: 'Scalable Infrastructure',
-            description: 'Resilient, scalable infrastructure tailored for growing businesses.'
+            description: 'Resilient, auto-scaling cloud infrastructure tailored for enterprise growth.'
         },
         {
             icon: <FaShieldAlt />,
             title: 'Security First',
-            description: 'Robust security with compliance checks and vulnerability assessments.'
+            description: 'DevSecOps practices with automated security testing, compliance, and vulnerability management.'
         }
     ]
 
@@ -116,17 +94,17 @@ function Home() {
                                 CI-to-CD: <span className="text-primary">Revolutionizing DevOps</span>
                             </h1>
                             <h2 className="hero-subtitle">
-                                From Code to Deployment
+                                Enterprise Cloud & DevOps Excellence
                             </h2>
                             <p className="hero-description">
-                                Streamline. Automate. Accelerate. <br />
-                                Empowering your DevOps journey with seamless CI/CD solutions and innovative business automation.
+                                Accelerate. Secure. Optimize. <br />
+                                Empowering enterprises with cutting-edge DevOps practices, cloud infrastructure, AI-powered automation, and security-first DevSecOps solutions.
                             </p>
                             <div className="hero-cta">
                                 <Link to="/contact" className="btn btn-primary btn-lg">
                                     Get Started
                                 </Link>
-                                <Link to="/services/cloud-migration" className="btn btn-outline btn-lg">
+                                <Link to="/services" className="btn btn-outline btn-lg">
                                     Explore Services
                                 </Link>
                             </div>
@@ -145,11 +123,11 @@ function Home() {
                                 </div>
                                 <div className="floating-card">
                                     <FaShieldAlt className="card-icon" />
-                                    <span>Secure & Compliant</span>
+                                    <span>DevSecOps</span>
                                 </div>
                                 <div className="floating-card">
-                                    <FaCloud className="card-icon" />
-                                    <span>Cloud Native</span>
+                                    <FaBrain className="card-icon" />
+                                    <span>AI-Powered</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -167,9 +145,9 @@ function Home() {
                         transition={{ duration: 0.6 }}
                         className="section-header"
                     >
-                        <h2>Our Services</h2>
+                        <h2>Our DevOps & Cloud Services</h2>
                         <p className="section-description">
-                            Comprehensive solutions for DevOps, cloud infrastructure, and business automation
+                            Comprehensive solutions for modern DevOps practices, cloud infrastructure, and secure delivery
                         </p>
                     </motion.div>
 
@@ -208,7 +186,7 @@ function Home() {
                     >
                         <h2>Why Choose CITOCD?</h2>
                         <p className="section-description">
-                            Discover what sets us apart in delivering world-class DevOps solutions
+                            Discover what sets us apart in delivering world-class DevOps and Cloud solutions
                         </p>
                     </motion.div>
 
@@ -242,7 +220,7 @@ function Home() {
                         className="cta-card glass"
                     >
                         <h2>Ready to Transform Your DevOps?</h2>
-                        <p>Let's discuss how we can accelerate your digital transformation journey.</p>
+                        <p>Let's discuss how we can accelerate your digital transformation journey with cloud and DevOps excellence.</p>
                         <div className="cta-buttons">
                             <Link to="/contact" className="btn btn-primary btn-lg">
                                 Contact Us
