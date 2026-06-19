@@ -369,7 +369,7 @@ textarea.form-input {
     font-size: var(--text-2xl);
     font-family: var(--font-heading);
     font-weight: 800;
-    color: var(--color-white);
+    color: #FF1E1E;
     margin-bottom: var(--space-2);
 }
 
@@ -435,9 +435,14 @@ textarea.form-input {
 }
 
 .timeline-node.active-node .timeline-dot {
-    border-color: var(--color-white);
-    color: var(--color-white);
-    box-shadow: var(--shadow-glow);
+    border-color: #FF1E1E;
+    color: #FF1E1E;
+    box-shadow: 0 0 25px rgba(255, 30, 30, 0.4);
+}
+
+.timeline-node.active-node h3 {
+    color: #FF1E1E;
+    text-shadow: 0 0 10px rgba(255, 30, 30, 0.2);
 }
 
 .timeline-node h3 {

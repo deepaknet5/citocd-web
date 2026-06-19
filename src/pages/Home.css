@@ -574,16 +574,3 @@
         width: 100%;
     }
 }
-
-/* Text Highlights Utility Classes */
-.text-blood-red {
-    color: #cc0000; /* Deep blood red */
-    font-weight: 800;
-    text-shadow: 0 0 12px rgba(204, 0, 0, 0.4);
-}
-
-.text-uppercase-bold {
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-}

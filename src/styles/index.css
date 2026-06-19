@@ -172,3 +172,17 @@ a:hover { color: #fff; text-shadow: 0 0 8px rgba(255, 255, 255, 0.3); }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Global Text Highlights Utility Classes */
+.text-blood-red {
+    color: #FF1E1E; /* Changed to ultra bright red matching clients theme */
+    font-weight: 800;
+    text-shadow: 0 0 12px rgba(255, 30, 30, 0.4);
+}
+
+.text-uppercase-bold {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+

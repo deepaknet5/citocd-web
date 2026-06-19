@@ -74,7 +74,7 @@ function About() {
         <div className="content-section">
           <h2>Our Core Identity</h2>
           <p>
-            CITOCD was built on the principle that modern software environments shouldn't require manual firefighting. 
+            CITOCD was built on the principle that modern software environments shouldn't require <span className="text-blood-red text-uppercase-bold">manual firefighting</span>. 
             We are a group of seasoned consultants and engineers with deep expertise across application design, 
             operations orchestration, and data security.
           </p>
@@ -108,7 +108,7 @@ function About() {
         <div className="content-section timeline-section">
           <h2>The Adaptability Vector</h2>
           <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto var(--space-8)' }}>
-            True engineering excellence lies in adaptability. We have evolved alongside the developer tools ecosystem—from foundational manuals to automated, AI-driven self-healing systems.
+            True engineering excellence lies in adaptability. We have evolved alongside the developer tools ecosystem—from foundational manuals to automated, <span className="text-blood-red text-uppercase-bold">AI-driven</span> self-healing systems.
           </p>
           <div className="timeline-wrapper">
             {timelineNodes.map((node, idx) => (
