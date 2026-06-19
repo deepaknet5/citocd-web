@@ -57,6 +57,21 @@
     border: 1px solid rgba(255, 255, 255, 0.06);
     padding: 12px;
     border-radius: 12px;
+    transition: all var(--transition-base);
+}
+
+.contact-method-icon-link {
+    display: inline-flex;
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+.contact-method-icon-link:hover .contact-method-icon {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    color: #ff1e1e;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .contact-method h4 {

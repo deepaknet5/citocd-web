@@ -22,7 +22,7 @@ function Footer() {
                             <a href="https://www.linkedin.com/company/citocd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Page">
                                 <FaLinkedinIn />
                             </a>
-                            <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" rel="noopener noreferrer" aria-label="WhatsApp Community">
+                            <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Community">
                                 <FaWhatsapp />
                             </a>
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -59,12 +59,16 @@ function Footer() {
                         <h4>Contact Us</h4>
                         <ul className="contact-info">
                             <li>
-                                <FaEnvelope className="contact-icon" />
-                                <a href="mailto:accounts@citocd.com">accounts@CItoCD.com</a>
+                                <a href="mailto:accounts@citocd.com" className="contact-info-link">
+                                    <FaEnvelope className="contact-icon" />
+                                    <span>accounts@CItoCD.com</span>
+                                </a>
                             </li>
                             <li>
-                                <FaWhatsapp className="contact-icon" />
-                                <a href="https://wa.me/919746669944" rel="noopener noreferrer">WhatsApp Support</a>
+                                <a href="https://api.whatsapp.com/send?phone=919746669944" target="_blank" rel="noopener noreferrer" className="contact-info-link">
+                                    <FaWhatsapp className="contact-icon" />
+                                    <span>WhatsApp Support</span>
+                                </a>
                             </li>
                         </ul>
                         <Link to="/contact" className="btn btn-primary btn-sm">

@@ -52,7 +52,9 @@ function Contact() {
             
             <div className="contact-methods mt-8">
               <div className="contact-method">
-                <FaEnvelope className="contact-method-icon" />
+                <a href="mailto:accounts@citocd.com" className="contact-method-icon-link">
+                  <FaEnvelope className="contact-method-icon" />
+                </a>
                 <div>
                   <h4><span className="text-blood-red">E</span>mail</h4>
                   <a href="mailto:accounts@citocd.com">accounts@<span className="brand-name" style={{ fontSize: 'inherit', fontWeight: 'inherit', textShadow: 'none' }}>CItoCD</span>.com</a>
@@ -60,20 +62,24 @@ function Contact() {
               </div>
               
               <div className="contact-method">
-                <FaWhatsapp className="contact-method-icon" />
+                <a href="https://api.whatsapp.com/send?phone=919746669944" target="_blank" rel="noopener noreferrer" className="contact-method-icon-link">
+                  <FaWhatsapp className="contact-method-icon" />
+                </a>
                 <div>
                   <h4><span className="text-blood-red">W</span>hatsApp Support</h4>
-                  <a href="https://wa.me/919746669944" rel="noopener noreferrer">
+                  <a href="https://api.whatsapp.com/send?phone=919746669944" target="_blank" rel="noopener noreferrer">
                     Chat with us <span className="text-blood-red">instantly</span>
                   </a>
                 </div>
               </div>
               
               <div className="contact-method">
-                <FaWhatsapp className="contact-method-icon" />
+                <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" target="_blank" rel="noopener noreferrer" className="contact-method-icon-link">
+                  <FaWhatsapp className="contact-method-icon" />
+                </a>
                 <div>
                   <h4><span className="text-blood-red">W</span>hatsApp Community</h4>
-                  <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" rel="noopener noreferrer">
+                  <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" target="_blank" rel="noopener noreferrer">
                     Join our <span className="text-blood-red">DevOps community</span>
                   </a>
                 </div>
@@ -82,8 +88,11 @@ function Contact() {
               <div className="contact-method">
                 <FaMapMarkerAlt className="contact-method-icon" />
                 <div>
-                  <h4><span className="text-blood-red">G</span>lobal Headquarters</h4>
-                  <p>Serving clients <span className="text-blood-red">Worldwide</span></p>
+                  <h4><span className="text-blood-red">C</span>orporate Office</h4>
+                  <p>
+                    WeWork Krishe Emerald,<br />
+                    Kondapur, Hyderabad
+                  </p>
                 </div>
               </div>
             </div>

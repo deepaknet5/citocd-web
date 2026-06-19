@@ -73,6 +73,7 @@
     filter: blur(100px);
     opacity: 0.08;
     animation: pulseGlow 4s infinite alternate;
+    pointer-events: none;
 }
 
 @keyframes pulseGlow {
@@ -95,6 +96,7 @@
     color: var(--color-text-primary);
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     animation: float 4s ease-in-out infinite;
+    pointer-events: none;
 }
 
 .floating-card.c1 { top: 15%; left: 10%; animation-delay: 0s; }
