@@ -11,22 +11,17 @@ function Footer() {
                 <div className="footer-content">
                     {/* Company Info */}
                     <div className="footer-section">
-                        <img src="/assets/logo.png" alt="CITOCD" className="footer-logo" />
+                        <img src="/assets/logd.png" alt="CITOCD" className="footer-logo" />
                         <p className="footer-description">
                             Revolutionizing DevOps with cutting-edge CI/CD solutions, cloud infrastructure, AI-powered automation, and security-first DevSecOps practices.
                         </p>
                         <div className="social-links">
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                                <FaTwitter />
-                            </a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                                <FaFacebookF />
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            {/* Replace with your actual marketing/social links when ready */}
+                            <a href="https://www.linkedin.com/company/citocd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Page">
                                 <FaLinkedinIn />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                                <FaInstagram />
+                            <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Community">
+                                <FaWhatsapp />
                             </a>
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                 <FaGithub />
@@ -38,6 +33,7 @@ function Footer() {
                     <div className="footer-section">
                         <h4>DevOps & Cloud Services</h4>
                         <ul>
+                            <li><Link to="/services/devops-automation">DevOps Automation</Link></li>
                             <li><Link to="/services/cloud-migration">Cloud Migration</Link></li>
                             <li><Link to="/services/application-modernization">Application Modernization</Link></li>
                             <li><Link to="/services/advanced-automation">Advanced Automation</Link></li>
@@ -66,7 +62,7 @@ function Footer() {
                             </li>
                             <li>
                                 <FaWhatsapp className="contact-icon" />
-                                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
+                                <a href="https://wa.me/919746669944" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
                             </li>
                         </ul>
                         <Link to="/contact" className="btn btn-primary btn-sm">

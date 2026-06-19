@@ -5,6 +5,7 @@ dist-ssr
 .DS_Store
 old-html-backup
 setup-nodejs.sh
+manage.sh
 
 # Editor directories and files
 .vscode/*

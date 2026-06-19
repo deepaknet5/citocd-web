@@ -36,9 +36,9 @@ export function createServicePage(config) {
           </div>
 
           <div className="content-section text-center">
-            <a href="/contact" className="btn btn-primary btn-lg">
+            <Link to="/contact" className="btn btn-primary btn-lg">
               Get Started with {config.title}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

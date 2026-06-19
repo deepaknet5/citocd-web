@@ -1,46 +1,47 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
-    FaCloud, FaRocket, FaCog, FaBrain, FaShieldAlt
+    FaCloud, FaRocket, FaCog, FaBrain, FaShieldAlt, FaSync
 } from 'react-icons/fa'
 import './SharedPages.css'
 
 function Services() {
     const services = [
         {
+            icon: <FaSync />,
+            title: 'DevOps Automation & CI/CD',
+            description: 'Build, test, and deploy with fully automated pipelines (CI/CD) and Infrastructure as Code (IaC) solutions to accelerate releases safely.',
+            link: '/services/devops-automation'
+        },
+        {
             icon: <FaCloud />,
-            title: 'Cloud Migration',
-            description: 'Seamless migration to AWS, Azure, and Google Cloud with zero downtime and optimized costs.',
-            link: '/services/cloud-migration',
-            color: '#3498DB'
+            title: 'Legacy to Clouds & Private Clouds',
+            description: 'Migrate legacy infrastructure to public hyperscalers or secure private clouds, with a focus on region-specific data protection and residency compliance.',
+            link: '/services/cloud-migration'
         },
         {
             icon: <FaRocket />,
             title: 'Application Modernization',
             description: 'Transform legacy systems into modern, scalable cloud-native microservices architectures.',
-            link: '/services/application-modernization',
-            color: '#9B59B6'
+            link: '/services/application-modernization'
         },
         {
             icon: <FaCog />,
-            title: 'Advanced Automation',
-            description: 'Streamline workflows with CI/CD pipelines, Infrastructure as Code, and intelligent automation.',
-            link: '/services/advanced-automation',
-            color: '#E67E22'
+            title: 'Deterministic Automation (No-LLM)',
+            description: 'Implement local, secure automation agents that operate without LLM interventions, ensuring zero data leakage and 100% predictability.',
+            link: '/services/advanced-automation'
         },
         {
             icon: <FaBrain />,
-            title: 'AI-Powered DevOps',
-            description: 'Intelligent automation, predictive analytics, and self-healing systems using AI/ML.',
-            link: '/services/ai-powered-devops',
-            color: '#8E44AD'
+            title: 'L1 Support AI Agents',
+            description: 'Deploy autonomous self-hosted AI agents to monitor logs, manage incidents, and resolve tier-1 service alerts in real-time.',
+            link: '/services/ai-powered-devops'
         },
         {
             icon: <FaShieldAlt />,
-            title: 'DevSecOps',
-            description: 'Security-first approach with automated testing, compliance, and zero-trust architecture.',
-            link: '/services/devsecops',
-            color: '#27AE60'
+            title: 'Security & DevOps Assessments',
+            description: 'Conduct deep assessments of your cloud security posture, zero-trust configurations, and pipeline maturity compliance (SOC2/HIPAA).',
+            link: '/services/devsecops'
         }
     ]
 
@@ -64,7 +65,7 @@ function Services() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <Link to={service.link} className="service-detail-card">
-                                <div className="service-detail-icon" style={{ background: service.color }}>
+                                <div className="service-detail-icon">
                                     {service.icon}
                                 </div>
                                 <h3>{service.title}</h3>

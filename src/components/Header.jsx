@@ -40,6 +40,9 @@ function Header() {
 
                             <div className={`dropdown-menu ${isServicesOpen ? 'dropdown-open' : ''}`}>
                                 <h4 className="dropdown-header">DevOps & Cloud Services</h4>
+                                <NavLink to="/services/devops-automation" onClick={closeMobileMenu}>
+                                    DevOps Automation
+                                </NavLink>
                                 <NavLink to="/services/cloud-migration" onClick={closeMobileMenu}>
                                     Cloud Migration
                                 </NavLink>

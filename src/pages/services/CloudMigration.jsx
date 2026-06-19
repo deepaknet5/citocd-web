@@ -3,13 +3,13 @@ import { createServicePage } from './ServiceTemplate'
 
 export default createServicePage({
   icon: <FaCloud />,
-  title: 'Cloud Migration',
-  subtitle: 'Seamless migration to AWS, Azure, and Google Cloud with zero downtime',
-  overview: 'Our cloud migration services help you transition from on-premises infrastructure to cloud platforms with minimal disruption. We ensure data integrity, security, and cost optimization throughout the migration process.',
+  title: 'Legacy to Clouds & Private Clouds',
+  subtitle: 'Transition legacy workloads to public hyperscalers or private clouds with sovereign region data protection',
+  overview: 'Seamlessly shift legacy setups to modern, scalable environments. We architect migrations to major public hyperscalers (AWS, Azure, GCP) or secure private clouds (OpenStack, VMware, Bare Metal), designing region-specific architectures that guarantee data residency compliance (GDPR, HIPAA, local jurisdiction laws).',
   benefits: [
-    { title: 'Zero Downtime', description: 'Migrate without business interruption using proven strategies' },
-    { title: 'Multi-Cloud Support', description: 'AWS, Azure, GCP, and hybrid cloud solutions' },
-    { title: 'Cost Optimization', description: 'Right-sizing resources for optimal cloud spending' },
-    { title: 'Security & Compliance', description: 'Enterprise-grade security and regulatory compliance' }
+    { title: 'Hyperscaler & Private Cloud', description: 'Deploy flexibly across AWS, Azure, GCP, or secure localized private cloud infrastructures.' },
+    { title: 'Sovereign Data Protection', description: 'Implement region-specific routing and storage controls to keep sensitive data strictly within compliance zones.' },
+    { title: 'Zero Downtime Cuts', description: 'Migrate active databases and live applications without service interruption using shadow cutover methods.' },
+    { title: 'Legacy Modernization', description: 'Upgrade monolithic apps into lightweight container setups during the transition process.' }
   ]
 })

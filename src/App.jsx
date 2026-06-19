@@ -13,6 +13,7 @@ import ApplicationModernization from './pages/services/ApplicationModernization'
 import AdvancedAutomation from './pages/services/AdvancedAutomation'
 import AIPoweredDevOps from './pages/services/AIPoweredDevOps'
 import DevSecOps from './pages/services/DevSecOps'
+import DevOpsAutomation from './pages/services/DevOpsAutomation'
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/services/advanced-automation" element={<AdvancedAutomation />} />
                     <Route path="/services/ai-powered-devops" element={<AIPoweredDevOps />} />
                     <Route path="/services/devsecops" element={<DevSecOps />} />
+                    <Route path="/services/devops-automation" element={<DevOpsAutomation />} />
                 </Routes>
             </main>
             <Footer />

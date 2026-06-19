@@ -1,80 +1,120 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
     FaCloud, FaRocket, FaCog, FaBrain, FaShieldAlt,
-    FaChartLine, FaClock, FaUsers
+    FaChartLine, FaRobot, FaUsers, FaGlobe,
+    FaChevronDown, FaChevronUp, FaServer, FaCheckCircle, FaLock
 } from 'react-icons/fa'
+import { SiAmazonwebservices, SiDocker, SiKubernetes } from 'react-icons/si'
+import { VscAzure } from 'react-icons/vsc'
 import './Home.css'
 
 function Home() {
+    const [activeFaq, setActiveFaq] = useState(null)
+
+    const toggleFaq = (index) => {
+        if (activeFaq === index) {
+            setActiveFaq(null)
+        } else {
+            setActiveFaq(index)
+        }
+    }
+
     const services = [
         {
-            icon: <FaCloud />,
-            title: 'Cloud Migration',
-            description: 'Seamless migration to AWS, Azure, and Google Cloud with zero downtime and optimized costs.',
-            link: '/services/cloud-migration',
-            color: '#3498DB'
-        },
-        {
-            icon: <FaRocket />,
-            title: 'Application Modernization',
-            description: 'Transform legacy systems into modern, scalable cloud-native microservices architectures.',
-            link: '/services/application-modernization',
-            color: '#9B59B6'
-        },
-        {
-            icon: <FaCog />,
-            title: 'Advanced Automation',
-            description: 'Streamline workflows with CI/CD pipelines, Infrastructure as Code, and intelligent automation.',
-            link: '/services/advanced-automation',
-            color: '#E67E22'
-        },
-        {
-            icon: <FaBrain />,
-            title: 'AI-Powered DevOps',
-            description: 'Intelligent automation, predictive analytics, and self-healing systems using AI/ML.',
-            link: '/services/ai-powered-devops',
-            color: '#8E44AD'
-        },
-        {
             icon: <FaShieldAlt />,
-            title: 'DevSecOps',
-            description: 'Security-first approach with automated testing, compliance, and zero-trust architecture.',
-            link: '/services/devsecops',
-            color: '#27AE60'
+            title: 'Security & DevOps Assessments',
+            description: <>Conduct deep assessments of your cloud security posture, zero-trust configurations, and pipeline maturity compliance (SOC2/HIPAA) to prevent critical security <span className="text-blood-red text-uppercase-bold">BREACHES</span>.</>,
+            link: '/services/devsecops'
+        },
+        {
+            icon: <FaRobot />,
+            title: 'L1 Support AI Agents',
+            description: <>Deploy autonomous self-hosted AI agents to monitor logs, manage incidents, and resolve tier-1 service alerts in real-time.</>,
+            link: '/services/ai-powered-devops'
+        },
+        {
+            icon: <FaCloud />,
+            title: 'Legacy to Clouds & Private Clouds',
+            description: <>Migrate legacy infrastructure to public hyperscalers or secure private clouds, with a focus on region-specific data protection and residency compliance.</>,
+            link: '/services/cloud-migration'
         }
     ]
 
     const features = [
         {
-            icon: <FaChartLine />,
-            title: 'Cloud Agility',
-            description: 'Multi-cloud support ensuring scalability, flexibility, and cost optimization.'
+            icon: <FaUsers />,
+            title: 'Upgrade L1 Engineers',
+            description: 'Free your entry-level engineers from repetitive tasks. Our agents handle L1 while your team focuses on high-value engineering.'
         },
         {
-            icon: <FaUsers />,
-            title: 'Collaborative DevOps',
-            description: 'Seamless team collaboration with integrated workflows and automated communication.'
+            icon: <FaGlobe />,
+            title: 'WORLDWIDE DELIVERY',
+            description: 'Proven track record of delivering high-quality DevSecOps architectures for private, government, and mid-to-large enterprises globally.'
         },
         {
             icon: <FaCog />,
-            title: 'Intelligent Automation',
-            description: 'AI-powered automation that streamlines workflows and eliminates manual tasks.'
+            title: 'Custom CI/CD Workflows',
+            description: 'Highly customized, automated CI/CD pipelines designed for maximum agility and zero-downtime deployments.'
         },
         {
-            icon: <FaClock />,
-            title: 'Faster Time-to-Market',
-            description: 'Accelerate product delivery with automated CI/CD pipelines and DevOps best practices.'
+            icon: <FaChartLine />,
+            title: 'GUARANTEED ROI',
+            description: 'Reduce operational costs by replacing process delays with instant, automated resolutions.'
+        }
+    ]
+
+    const trustBadges = [
+        "FINTECH & BANKING", "GOVERNMENT CLOUD", "HEALTHCARE SAAS", "ENTERPRISE TELECOM", "AI LABS"
+    ]
+
+    const metrics = [
+        { value: "99.99%", label: "Uptime SLA Guaranteed", description: "Architected for high availability and instant self-healing." },
+        { value: "10x", label: "Deployment Velocity", description: "Accelerated release cycles from days to minutes safely." },
+        { value: "65%", label: "Cost Optimization", description: "Average reduction in enterprise cloud infrastructure spend." },
+        { value: "100%", label: "Zero-Trust Security", description: "Fully compliant with SOC2, ISO 27001, and HIPAA protocols." }
+    ]
+
+    const steps = [
+        {
+            num: "01",
+            title: "Audit & Analysis",
+            desc: "We analyze your active pipelines, identify deployment bottlenecks, and audit L1 operational overhead."
         },
         {
-            icon: <FaRocket />,
-            title: 'Scalable Infrastructure',
-            description: 'Resilient, auto-scaling cloud infrastructure tailored for enterprise growth.'
+            num: "02",
+            title: "Architecture Blueprint",
+            desc: "We design a zero-trust architecture outline incorporating modern containerization and IaC plans."
         },
         {
-            icon: <FaShieldAlt />,
-            title: 'Security First',
-            description: 'DevSecOps practices with automated security testing, compliance, and vulnerability management.'
+            num: "03",
+            title: "Pipeline Automation",
+            desc: "Our engineers build secure, containerized CI/CD pipelines and provision infrastructure with code."
+        },
+        {
+            num: "04",
+            title: "Self-Healing Deployment",
+            desc: "We integrate proprietary self-hosted AI agents to automatically resolve L1 issues in real-time."
+        }
+    ]
+
+    const faqs = [
+        {
+            q: "How do self-hosted AI agents work?",
+            a: "Our proprietary AI agents run securely within your VPC. They continuously monitor logs, identify anomalous behavior, and automatically execute safe, pre-approved runbooks to resolve L1 issues instantly without human intervention."
+        },
+        {
+            q: "Which cloud platforms does CITOCD support?",
+            a: "We provide full support for AWS, Microsoft Azure, Google Cloud Platform (GCP), and hybrid/on-premise environments running Docker and Kubernetes."
+        },
+        {
+            q: "How does CITOCD ensure security and compliance?",
+            a: "CITOCD prioritizes security at every level. We implement zero-trust access controls, integrate automated vulnerability scanning (SAST/DAST) directly into CI/CD pipelines, and align with industry standards including SOC2, ISO 27001, and HIPAA."
+        },
+        {
+            q: "What is the typical timeline for an enterprise migration?",
+            a: "Timelines vary depending on infrastructure complexity. A standard migration and pipeline overhaul typically takes 4 to 8 weeks, with zero downtime guaranteed during the transition."
         }
     ]
 
@@ -91,21 +131,20 @@ function Home() {
                             className="hero-text"
                         >
                             <h1 className="hero-title">
-                                CI-to-CD: <span className="text-primary">Revolutionizing DevOps</span>
+                                Revolutionizing <span className="text-gradient text-uppercase-bold">DEVSECOPS</span>
                             </h1>
                             <h2 className="hero-subtitle">
-                                Enterprise Cloud & DevOps Excellence
+                                Replace L1 <span className="text-blood-red text-uppercase-bold">INEFFICIENCIES</span> with Automated Self-Hosted Agents
                             </h2>
                             <p className="hero-description">
-                                Accelerate. Secure. Optimize. <br />
-                                Empowering enterprises with cutting-edge DevOps practices, cloud infrastructure, AI-powered automation, and security-first DevSecOps solutions.
+                                Stop wasting time on manual processes. We empower worldwide enterprises by eliminating costly <span className="text-blood-red text-uppercase-bold">DOWNTIME</span>, automating pipelines, and deploying self-healing AI agents for real-time operations.
                             </p>
                             <div className="hero-cta">
-                                <Link to="/contact" className="btn btn-primary btn-lg">
-                                    Get Started
+                                <Link to="/contact" className="btn btn-primary">
+                                    Get a Quote
                                 </Link>
-                                <Link to="/services" className="btn btn-outline btn-lg">
-                                    Explore Services
+                                <Link to="/services" className="btn btn-outline">
+                                    Explore Solutions
                                 </Link>
                             </div>
                         </motion.div>
@@ -117,17 +156,18 @@ function Home() {
                             className="hero-image"
                         >
                             <div className="hero-visual">
-                                <div className="floating-card">
-                                    <FaRocket className="card-icon" />
-                                    <span>Fast Deployment</span>
+                                <div className="glow-sphere"></div>
+                                <div className="floating-card c1">
+                                    <FaRobot className="card-icon" />
+                                    <span className="text-uppercase-bold">AI AGENTS ACTIVE</span>
                                 </div>
-                                <div className="floating-card">
+                                <div className="floating-card c2 card-red">
                                     <FaShieldAlt className="card-icon" />
-                                    <span>DevSecOps</span>
+                                    <span className="text-uppercase-bold">ZERO-TRUST SECURITY</span>
                                 </div>
-                                <div className="floating-card">
-                                    <FaBrain className="card-icon" />
-                                    <span>AI-Powered</span>
+                                <div className="floating-card c3">
+                                    <FaRocket className="card-icon" />
+                                    <span>Zero Downtime</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -135,8 +175,20 @@ function Home() {
                 </div>
             </section>
 
+            {/* Trust Banner */}
+            <section className="trust-banner">
+                <div className="container">
+                    <p className="trust-title">TRUSTED BY LEADING ENGINEERING TEAMS IN HIGH-VALUE SECTORS</p>
+                    <div className="trust-grid">
+                        {trustBadges.map((badge, idx) => (
+                            <span key={idx} className={`trust-badge ${idx === 0 || idx === 4 ? 'badge-red' : ''}`}>{badge}</span>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Services Grid */}
-            <section className="services-section py-20 bg-gray">
+            <section className="section services-section">
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -145,13 +197,13 @@ function Home() {
                         transition={{ duration: 0.6 }}
                         className="section-header"
                     >
-                        <h2>Our DevOps & Cloud Services</h2>
+                        <h2>Next-<span className="text-blood-red text-uppercase-bold">Gen</span> <span className="text-gradient">Capabilities</span></h2>
                         <p className="section-description">
-                            Comprehensive solutions for modern DevOps practices, cloud infrastructure, and secure delivery
+                            Delivering enterprise-grade solutions for private, government, and Fortune 500 companies.
                         </p>
                     </motion.div>
 
-                    <div className="services-grid">
+                    <div className="grid-3">
                         {services.map((service, index) => (
                             <motion.div
                                 key={service.title}
@@ -160,8 +212,8 @@ function Home() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <Link to={service.link} className="service-card">
-                                    <div className="service-icon" style={{ background: service.color }}>
+                                <Link to={service.link} className="glass-card service-card">
+                                    <div className="service-icon">
                                         {service.icon}
                                     </div>
                                     <h3>{service.title}</h3>
@@ -174,8 +226,8 @@ function Home() {
                 </div>
             </section>
 
-            {/* Features Section */}
-            <section className="features-section py-20">
+            {/* Performance Metrics Section */}
+            <section className="section metrics-section">
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -184,13 +236,48 @@ function Home() {
                         transition={{ duration: 0.6 }}
                         className="section-header"
                     >
-                        <h2>Why Choose CITOCD?</h2>
+                        <h2>CITOCD by the <span className="text-gradient">Numbers</span></h2>
                         <p className="section-description">
-                            Discover what sets us apart in delivering world-class DevOps and Cloud solutions
+                            Our automated architectures and AI agents generate tangible business impact globally.
                         </p>
                     </motion.div>
 
-                    <div className="features-grid">
+                    <div className="grid-4 metrics-grid">
+                        {metrics.map((metric, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="glass-card metric-card"
+                            >
+                                <div className="metric-value">{metric.value}</div>
+                                <h3>{metric.label}</h3>
+                                <p>{metric.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Features Section */}
+            <section className="section features-section">
+                <div className="container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="section-header"
+                    >
+                        <h2>Why Partner With <span className="text-gradient">CITOCD?</span></h2>
+                        <p className="section-description">
+                            We don't just maintain your infrastructure; we upgrade your entire engineering methodology.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid-2">
                         {features.map((feature, index) => (
                             <motion.div
                                 key={feature.title}
@@ -198,35 +285,191 @@ function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="feature-card"
+                                className="glass-card feature-card"
                             >
                                 <div className="feature-icon">{feature.icon}</div>
-                                <h3>{feature.title}</h3>
-                                <p>{feature.description}</p>
+                                <div className="feature-content">
+                                    <h3>{feature.title}</h3>
+                                    <p>{feature.description}</p>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
+            {/* DevOps Integration Stack Section */}
+            <section className="section integrations-section">
+                <div className="container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="section-header"
+                    >
+                        <h2>Supported <span className="text-gradient text-uppercase-bold">INFRASTRUCTURE</span></h2>
+                        <p className="section-description">
+                            CITOCD integrates seamlessly with industry-standard DevOps and cloud platforms to deliver <strong className="text-uppercase-bold">ROBUST</strong>, secure automation.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid-4 integrations-grid">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            className="glass-card integration-card aws-card"
+                        >
+                            <div className="integration-icon-container">
+                                <SiAmazonwebservices className="integration-icon" />
+                            </div>
+                            <h3>AWS</h3>
+                            <p>Deploy secure, multi-region architectures, serverless workloads, and optimize costs with AWS Well-Architected guidelines.</p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="glass-card integration-card azure-card"
+                        >
+                            <div className="integration-icon-container">
+                                <VscAzure className="integration-icon" />
+                            </div>
+                            <h3>Azure</h3>
+                            <p>Architect robust hybrid cloud deployments, enterprise Active Directory integrations, and reliable backup pipelines.</p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            className="glass-card integration-card docker-card"
+                        >
+                            <div className="integration-icon-container">
+                                <SiDocker className="integration-icon" />
+                            </div>
+                            <h3>Docker</h3>
+                            <p>Standardize application environments with lightweight container isolation, ensuring parity across staging and production.</p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            className="glass-card integration-card kubernetes-card"
+                        >
+                            <div className="integration-icon-container">
+                                <SiKubernetes className="integration-icon" />
+                            </div>
+                            <h3>Kubernetes</h3>
+                            <p>Orchestrate container deployments with self-healing clusters, auto-scaling, and rolling updates with zero-downtime.</p>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Step-by-Step Methodology Timeline */}
+            <section className="section steps-section">
+                <div className="container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="section-header"
+                    >
+                        <h2>Our <span className="text-gradient text-uppercase-bold">METHODOLOGY</span></h2>
+                        <p className="section-description">
+                            How we audit, design, build, and deploy self-healing architectures for your team.
+                        </p>
+                    </motion.div>
+
+                    <div className="steps-container">
+                        {steps.map((step, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="step-item"
+                            >
+                                <div className="step-num">{step.num}</div>
+                                <div className="step-content">
+                                    <h3>{step.title}</h3>
+                                    <p>{step.desc}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Interactive FAQ Accordion */}
+            <section className="section faq-section">
+                <div className="container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="section-header"
+                    >
+                        <h2>Frequently Asked <span className="text-gradient text-uppercase-bold">QUESTIONS</span></h2>
+                        <p className="section-description">
+                            Clear answers to questions regarding our AI agents, compliance protocols, and platform onboarding.
+                        </p>
+                    </motion.div>
+
+                    <div className="faq-accordion">
+                        {faqs.map((faq, idx) => (
+                            <div key={idx} className={`faq-item ${activeFaq === idx ? 'active' : ''}`} onClick={() => toggleFaq(idx)}>
+                                <div className="faq-question">
+                                    <h3>{faq.q}</h3>
+                                    <span className="faq-toggle">
+                                        {activeFaq === idx ? <FaChevronUp /> : <FaChevronDown />}
+                                    </span>
+                                </div>
+                                <AnimatePresence initial={false}>
+                                    {activeFaq === idx && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="faq-answer-wrapper"
+                                        >
+                                            <p className="faq-answer">{faq.a}</p>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Section */}
-            <section className="cta-section py-20">
+            <section className="section cta-section">
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="cta-card glass"
+                        className="glass-card cta-card"
                     >
-                        <h2>Ready to Transform Your DevOps?</h2>
-                        <p>Let's discuss how we can accelerate your digital transformation journey with cloud and DevOps excellence.</p>
-                        <div className="cta-buttons">
-                            <Link to="/contact" className="btn btn-primary btn-lg">
-                                Contact Us
-                            </Link>
-                            <Link to="/clients" className="btn btn-secondary btn-lg">
-                                View Our Clients
+                        <h2>Ready to Automate Your World?</h2>
+                        <p>Let's discuss how our self-hosted agents can instantly resolve system <span className="text-blood-red text-uppercase-bold">FAILURES</span>, improve your delivery quality, and free up your engineering team.</p>
+                        <div className="cta-buttons mt-8">
+                            <Link to="/contact" className="btn btn-primary">
+                                Connect With Our Experts
                             </Link>
                         </div>
                     </motion.div>
