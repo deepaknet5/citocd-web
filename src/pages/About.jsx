@@ -7,43 +7,43 @@ function About() {
     {
       icon: <FaLaptopCode />,
       xp: "30 Years Experience",
-      title: "Application Architecture",
-      desc: "Designing high-scale, distributed microservices, failover systems, and enterprise cloud-native frameworks."
+      title: <><span className="text-blood-red">A</span>pplication Architecture</>,
+      desc: <>Designing high-scale, distributed microservices, <span className="text-blood-red">failover systems</span>, and enterprise cloud-native frameworks.</>
     },
     {
       icon: <FaServer />,
       xp: "20+ Years Experience",
-      title: "DevOps & Cloud Systems",
-      desc: "Pioneering continuous delivery, zero-downtime container orchestration (K8s), and multi-provider hyperscaler automation."
+      title: <><span className="text-blood-red">D</span>evOps & Cloud Systems</>,
+      desc: <>Pioneering <span className="text-blood-red">continuous delivery</span>, zero-downtime container orchestration (K8s), and multi-provider hyperscaler automation.</>
     },
     {
       icon: <FaShieldAlt />,
       xp: "25+ Years Experience",
-      title: "Cyber Security & Audits",
-      desc: "Implementing zero-trust access, secure compliance pipelines, and scoring system vulnerabilities against SOC2/ISO metrics."
+      title: <><span className="text-blood-red">C</span>yber Security & Audits</>,
+      desc: <>Implementing <span className="text-blood-red">zero-trust</span> access, secure compliance pipelines, and scoring system <span className="text-blood-red">vulnerabilities</span> against SOC2/ISO metrics.</>
     }
   ]
 
   const timelineNodes = [
     {
       icon: <FaBook />,
-      title: "Books",
+      title: <><span className="text-blood-red">B</span>ooks</>,
       desc: "Theoretical foundations, standard engineering manuals, and core algorithm mastery."
     },
     {
       icon: <FaGoogle />,
-      title: "Google",
+      title: <><span className="text-blood-red">G</span>oogle</>,
       desc: "Global documentation indexing, fast references, and high development velocity."
     },
     {
       icon: <FaStackOverflow />,
-      title: "Stack Overflow",
+      title: <><span className="text-blood-red">S</span>tack Overflow</>,
       desc: "Crowd-sourced solutions, community-led debugging, and collaborative debugging patterns."
     },
     {
       icon: <FaRobot />,
-      title: "AI Agents",
-      desc: "Autonomous system operations, self-healing runbooks, and zero-human-intervention loops."
+      title: <><span className="text-blood-red">A</span>I Agents</>,
+      desc: <>Autonomous system operations, <span className="text-blood-red">self-healing</span> runbooks, and zero-human-intervention loops.</>
     }
   ]
 
@@ -56,7 +56,7 @@ function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            About CITOCD
+            <span className="text-blood-red">A</span>bout <span className="brand-name">CItoCD</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -72,17 +72,17 @@ function About() {
       <div className="container py-16">
         {/* Core Mission */}
         <div className="content-section">
-          <h2>Our Core Identity</h2>
+          <h2>Our <span className="text-blood-red">C</span>ore <span className="text-blood-red">I</span>dentity</h2>
           <p>
-            CITOCD was built on the principle that modern software environments shouldn't require <span className="text-blood-red text-uppercase-bold">manual firefighting</span>. 
-            We are a group of seasoned consultants and engineers with deep expertise across application design, 
-            operations orchestration, and data security.
+            <span className="brand-name">CItoCD</span> was built on the principle that modern software environments shouldn't require <span className="text-blood-red text-uppercase-bold">manual firefighting</span>. 
+            We are a group of seasoned consultants and engineers with deep expertise across <span className="text-blood-red">application design</span>, 
+            <span className="text-blood-red">operations orchestration</span>, and <span className="text-blood-red">data security</span>.
           </p>
         </div>
 
         {/* Team Strengths */}
         <div className="content-section">
-          <h2>Our Veteran Team Strength</h2>
+          <h2>Our <span className="text-blood-red">V</span>eteran <span className="text-blood-red">T</span>eam <span className="text-blood-red">S</span>trength</h2>
           <div className="about-grid">
             {teamStrengths.map((item, idx) => (
               <motion.div
@@ -106,7 +106,7 @@ function About() {
 
         {/* Adaptability Timeline */}
         <div className="content-section timeline-section">
-          <h2>The Adaptability Vector</h2>
+          <h2>The <span className="text-blood-red">A</span>daptability <span className="text-blood-red">V</span>ector</h2>
           <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto var(--space-8)' }}>
             True engineering excellence lies in adaptability. We have evolved alongside the developer tools ecosystem—from foundational manuals to automated, <span className="text-blood-red text-uppercase-bold">AI-driven</span> self-healing systems.
           </p>

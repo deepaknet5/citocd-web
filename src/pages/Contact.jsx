@@ -39,32 +39,32 @@ function Contact() {
     <div className="page">
       <div className="page-hero section">
         <div className="container">
-          <h1 className="text-gradient">Get In Touch</h1>
-          <p className="lead">Ready to automate your DevSecOps infrastructure? Let's talk.</p>
+          <h1 className="text-gradient"><span className="text-blood-red">G</span>et <span className="text-blood-red">I</span>n <span className="text-blood-red">T</span>ouch</h1>
+          <p className="lead">Ready to automate your <span className="text-blood-red">DevSecOps</span> <span className="text-blood-red">infrastructure</span>? Let's talk.</p>
         </div>
       </div>
       
       <div className="container py-16">
         <div className="contact-grid">
           <div className="contact-info">
-            <h2>Contact Our Experts</h2>
-            <p>Our engineers are ready to analyze your current infrastructure and propose a highly customized, automated solution.</p>
+            <h2><span className="text-blood-red">C</span>ontact <span className="text-blood-red">O</span>ur <span className="text-blood-red">E</span>xperts</h2>
+            <p>Our engineers are ready to analyze your current infrastructure and propose a highly <span className="text-blood-red">customized</span>, <span className="text-blood-red">automated solution</span>.</p>
             
             <div className="contact-methods mt-8">
               <div className="contact-method">
                 <FaEnvelope className="contact-method-icon" />
                 <div>
-                  <h4>Email</h4>
-                  <a href="mailto:accounts@citocd.com">accounts@citocd.com</a>
+                  <h4><span className="text-blood-red">E</span>mail</h4>
+                  <a href="mailto:accounts@citocd.com">accounts@<span className="brand-name" style={{ fontSize: 'inherit', fontWeight: 'inherit', textShadow: 'none' }}>CItoCD</span>.com</a>
                 </div>
               </div>
               
               <div className="contact-method">
                 <FaWhatsapp className="contact-method-icon" />
                 <div>
-                  <h4>WhatsApp Support</h4>
-                  <a href="https://wa.me/919746669944" target="_blank" rel="noopener noreferrer">
-                    Chat with us instantly
+                  <h4><span className="text-blood-red">W</span>hatsApp Support</h4>
+                  <a href="https://wa.me/919746669944" rel="noopener noreferrer">
+                    Chat with us <span className="text-blood-red">instantly</span>
                   </a>
                 </div>
               </div>
@@ -72,9 +72,9 @@ function Contact() {
               <div className="contact-method">
                 <FaWhatsapp className="contact-method-icon" />
                 <div>
-                  <h4>WhatsApp Community</h4>
-                  <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" target="_blank" rel="noopener noreferrer">
-                    Join our DevOps community
+                  <h4><span className="text-blood-red">W</span>hatsApp Community</h4>
+                  <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" rel="noopener noreferrer">
+                    Join our <span className="text-blood-red">DevOps community</span>
                   </a>
                 </div>
               </div>
@@ -82,8 +82,8 @@ function Contact() {
               <div className="contact-method">
                 <FaMapMarkerAlt className="contact-method-icon" />
                 <div>
-                  <h4>Global Headquarters</h4>
-                  <p>Serving clients Worldwide</p>
+                  <h4><span className="text-blood-red">G</span>lobal Headquarters</h4>
+                  <p>Serving clients <span className="text-blood-red">Worldwide</span></p>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ function Contact() {
 
           <form className="contact-form glass-card" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Full Name *</label>
+              <label htmlFor="name"><span className="text-blood-red">F</span>ull Name *</label>
               <input
                 type="text"
                 id="name"
@@ -102,7 +102,7 @@ function Contact() {
             </div>
 
             <div className="form-group mt-4">
-              <label htmlFor="email">Work Email *</label>
+              <label htmlFor="email"><span className="text-blood-red">W</span>ork Email *</label>
               <input
                 type="email"
                 id="email"
@@ -113,7 +113,7 @@ function Contact() {
             </div>
 
             <div className="form-group mt-4">
-              <label htmlFor="company">Company / Organization</label>
+              <label htmlFor="company"><span className="text-blood-red">C</span>ompany / Organization</label>
               <input
                 type="text"
                 id="company"
@@ -123,7 +123,7 @@ function Contact() {
             </div>
 
             <div className="form-group mt-4">
-              <label htmlFor="message">How can we help? *</label>
+              <label htmlFor="message"><span className="text-blood-red">H</span>ow can we help? *</label>
               <textarea
                 id="message"
                 name="message"
@@ -135,7 +135,7 @@ function Contact() {
             </div>
 
             <button type="submit" className="btn btn-primary mt-8" disabled={status === 'sending'}>
-              {status === 'sending' ? 'Sending Request...' : 'Send Message'}
+              {status === 'sending' ? 'Sending Request...' : <><span className="text-blood-red">S</span>end Message</>}
             </button>
 
             {status === 'success' && (

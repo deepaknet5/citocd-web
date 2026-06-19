@@ -1,5 +1,5 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800;900&family=Orbitron:wght@700;800;900&family=Space+Mono:wght@700&display=swap');
 
 /* CSS Variables - Premium Dark Design System */
 :root {
@@ -174,15 +174,47 @@ a:hover { color: #fff; text-shadow: 0 0 8px rgba(255, 255, 255, 0.3); }
 }
 
 /* Global Text Highlights Utility Classes */
+@keyframes pulseGlowRed {
+    0% { text-shadow: 0 0 8px rgba(255, 30, 30, 0.3); color: #FF1E1E; }
+    50% { text-shadow: 0 0 20px rgba(255, 30, 30, 0.8), 0 0 30px rgba(255, 30, 30, 0.4); color: #FF3C3C; }
+    100% { text-shadow: 0 0 8px rgba(255, 30, 30, 0.3); color: #FF1E1E; }
+}
+
 .text-blood-red {
-    color: #FF1E1E; /* Changed to ultra bright red matching clients theme */
+    color: #FF1E1E;
     font-weight: 800;
-    text-shadow: 0 0 12px rgba(255, 30, 30, 0.4);
+    display: inline-block;
+    animation: pulseGlowRed 3s infinite ease-in-out;
+    transition: all 0.3s ease;
+}
+
+.text-blood-red:hover {
+    transform: scale(1.05);
+    animation: none;
+    text-shadow: 0 0 25px rgba(255, 30, 30, 0.9), 0 0 35px rgba(255, 30, 30, 0.5);
+    color: #FFFFFF;
 }
 
 .text-uppercase-bold {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.05em;
+}
+
+/* Professional Brand-Name Highlights */
+.brand-name {
+    font-family: 'Space Mono', Courier, monospace;
+    color: #FF1E1E;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 30, 30, 0.3);
+    letter-spacing: -0.02em;
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand-name:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 20px rgba(255, 30, 30, 0.8), 0 0 30px rgba(255, 30, 30, 0.4);
+    transform: translateY(-1px) scale(1.02);
 }
 

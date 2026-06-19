@@ -11,7 +11,9 @@ function Footer() {
                 <div className="footer-content">
                     {/* Company Info */}
                     <div className="footer-section">
-                        <img src="/assets/logd.png" alt="CITOCD" className="footer-logo" />
+                        <div className="footer-logo-container" style={{ marginBottom: 'var(--space-4)' }}>
+                            <span className="brand-name" style={{ fontSize: '1.8rem', fontWeight: 900, letterSpacing: '-0.03em' }}>CItoCD</span>
+                        </div>
                         <p className="footer-description">
                             Revolutionizing DevOps with cutting-edge CI/CD solutions, cloud infrastructure, AI-powered automation, and security-first DevSecOps practices.
                         </p>
@@ -20,7 +22,7 @@ function Footer() {
                             <a href="https://www.linkedin.com/company/citocd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Page">
                                 <FaLinkedinIn />
                             </a>
-                            <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Community">
+                            <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" rel="noopener noreferrer" aria-label="WhatsApp Community">
                                 <FaWhatsapp />
                             </a>
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -58,11 +60,11 @@ function Footer() {
                         <ul className="contact-info">
                             <li>
                                 <FaEnvelope className="contact-icon" />
-                                <a href="mailto:accounts@citocd.com">accounts@citocd.com</a>
+                                <a href="mailto:accounts@citocd.com">accounts@CItoCD.com</a>
                             </li>
                             <li>
                                 <FaWhatsapp className="contact-icon" />
-                                <a href="https://wa.me/919746669944" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
+                                <a href="https://wa.me/919746669944" rel="noopener noreferrer">WhatsApp Support</a>
                             </li>
                         </ul>
                         <Link to="/contact" className="btn btn-primary btn-sm">
@@ -72,7 +74,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {currentYear} CITOCD. All rights reserved.</p>
+                    <p>&copy; {currentYear} <span className="brand-name" style={{ fontSize: '1rem' }}>CItoCD</span>. All rights reserved.</p>
                     <div className="footer-links">
                         <Link to="/privacy">Privacy Policy</Link>
                         <span className="separator">•</span>

@@ -20,8 +20,8 @@ function Header() {
         <header className="header">
             <div className="container">
                 <div className="header-content">
-                    <Link to="/" className="logo" onClick={closeMobileMenu}>
-                        <img src="/assets/logd.png" alt="CITOCD Logo" />
+                    <Link to="/" className="logo" onClick={closeMobileMenu} aria-label="CItoCD Home">
+                        <span className="brand-name" style={{ fontSize: '1.8rem', fontWeight: 900, letterSpacing: '-0.03em' }}>CItoCD</span>
                     </Link>
 
                     <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>

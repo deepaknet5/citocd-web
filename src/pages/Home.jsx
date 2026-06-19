@@ -31,13 +31,13 @@ function Home() {
         {
             icon: <FaRobot />,
             title: 'L1 Support AI Agents',
-            description: <>Deploy autonomous self-hosted AI agents to monitor logs, manage incidents, and resolve tier-1 service alerts in real-time.</>,
+            description: <>Deploy autonomous self-hosted <span className="text-blood-red text-uppercase-bold">AI agents</span> to monitor logs, manage incidents, and resolve tier-1 service alerts in real-time.</>,
             link: '/services/ai-powered-devops'
         },
         {
             icon: <FaCloud />,
             title: 'Legacy to Clouds & Private Clouds',
-            description: <>Migrate legacy infrastructure to public hyperscalers or secure private clouds, with a focus on region-specific data protection and residency compliance.</>,
+            description: <>Migrate legacy infrastructure to public hyperscalers or secure private clouds, with a focus on region-specific <span className="text-blood-red text-uppercase-bold">data protection</span> and residency compliance.</>,
             link: '/services/cloud-migration'
         }
     ]
@@ -105,12 +105,12 @@ function Home() {
             a: "Our proprietary AI agents run securely within your VPC. They continuously monitor logs, identify anomalous behavior, and automatically execute safe, pre-approved runbooks to resolve L1 issues instantly without human intervention."
         },
         {
-            q: "Which cloud platforms does CITOCD support?",
+            q: <>Which cloud platforms does <span className="brand-name">CItoCD</span> support?</>,
             a: "We provide full support for AWS, Microsoft Azure, Google Cloud Platform (GCP), and hybrid/on-premise environments running Docker and Kubernetes."
         },
         {
-            q: "How does CITOCD ensure security and compliance?",
-            a: "CITOCD prioritizes security at every level. We implement zero-trust access controls, integrate automated vulnerability scanning (SAST/DAST) directly into CI/CD pipelines, and align with industry standards including SOC2, ISO 27001, and HIPAA."
+            q: <>How does <span className="brand-name">CItoCD</span> ensure security and compliance?</>,
+            a: <><span className="brand-name">CItoCD</span> prioritizes security at every level. We implement zero-trust access controls, integrate automated vulnerability scanning (SAST/DAST) directly into CI/CD pipelines, and align with industry standards including SOC2, ISO 27001, and HIPAA.</>
         },
         {
             q: "What is the typical timeline for an enterprise migration?",
@@ -131,7 +131,7 @@ function Home() {
                             className="hero-text"
                         >
                             <h1 className="hero-title">
-                                Revolutionizing <span className="text-gradient text-uppercase-bold">DEVSECOPS</span>
+                                Revolutionizing <span className="text-blood-red text-uppercase-bold">DEVSECOPS</span>
                             </h1>
                             <h2 className="hero-subtitle">
                                 Replace L1 <span className="text-blood-red text-uppercase-bold">INEFFICIENCIES</span> with Automated Self-Hosted Agents
@@ -181,7 +181,9 @@ function Home() {
                     <p className="trust-title">TRUSTED BY LEADING ENGINEERING TEAMS IN HIGH-VALUE SECTORS</p>
                     <div className="trust-grid">
                         {trustBadges.map((badge, idx) => (
-                            <span key={idx} className={`trust-badge ${idx === 0 || idx === 4 ? 'badge-red' : ''}`}>{badge}</span>
+                            <span key={idx} className={`trust-badge ${idx === 0 || idx === 4 ? 'badge-red' : ''}`}>
+                                <span className="text-blood-red">{badge[0]}</span>{badge.slice(1)}
+                            </span>
                         ))}
                     </div>
                 </div>
@@ -197,7 +199,7 @@ function Home() {
                         transition={{ duration: 0.6 }}
                         className="section-header"
                     >
-                        <h2>Next-<span className="text-blood-red text-uppercase-bold">Gen</span> <span className="text-gradient">Capabilities</span></h2>
+                        <h2>Next-<span className="text-blood-red">G</span>en <span className="text-gradient"><span className="text-blood-red">C</span>apabilities</span></h2>
                         <p className="section-description">
                             Delivering enterprise-grade solutions for private, government, and Fortune 500 companies.
                         </p>
@@ -236,7 +238,7 @@ function Home() {
                         transition={{ duration: 0.6 }}
                         className="section-header"
                     >
-                        <h2>CITOCD by the <span className="text-gradient">Numbers</span></h2>
+                        <h2><span className="brand-name">CItoCD</span> by the <span className="text-gradient"><span className="text-blood-red">N</span>umbers</span></h2>
                         <p className="section-description">
                             Our automated architectures and AI agents generate tangible business impact globally.
                         </p>
@@ -271,7 +273,7 @@ function Home() {
                         transition={{ duration: 0.6 }}
                         className="section-header"
                     >
-                        <h2>Why Partner With <span className="text-gradient">CITOCD?</span></h2>
+                        <h2>Why Partner With <span className="brand-name">CItoCD</span>?</h2>
                         <p className="section-description">
                             We don't just maintain your infrastructure; we upgrade your entire engineering methodology.
                         </p>
@@ -310,7 +312,7 @@ function Home() {
                     >
                         <h2>Supported <span className="text-gradient text-uppercase-bold">INFRASTRUCTURE</span></h2>
                         <p className="section-description">
-                            CITOCD integrates seamlessly with industry-standard DevOps and cloud platforms to deliver <strong className="text-uppercase-bold">ROBUST</strong>, secure automation.
+                            <span className="brand-name">CItoCD</span> integrates seamlessly with industry-standard DevOps and cloud platforms to deliver <span className="text-blood-red text-uppercase-bold">ROBUST</span>, secure automation.
                         </p>
                     </motion.div>
 
@@ -384,7 +386,7 @@ function Home() {
                         transition={{ duration: 0.6 }}
                         className="section-header"
                     >
-                        <h2>Our <span className="text-gradient text-uppercase-bold">METHODOLOGY</span></h2>
+                        <h2>Our <span className="text-gradient text-uppercase-bold"><span className="text-blood-red">M</span>ETHODOLOGY</span></h2>
                         <p className="section-description">
                             How we audit, design, build, and deploy self-healing architectures for your team.
                         </p>
@@ -421,7 +423,7 @@ function Home() {
                         transition={{ duration: 0.6 }}
                         className="section-header"
                     >
-                        <h2>Frequently Asked <span className="text-gradient text-uppercase-bold">QUESTIONS</span></h2>
+                        <h2>Frequently Asked <span className="text-gradient text-uppercase-bold"><span className="text-blood-red">Q</span>UESTIONS</span></h2>
                         <p className="section-description">
                             Clear answers to questions regarding our AI agents, compliance protocols, and platform onboarding.
                         </p>

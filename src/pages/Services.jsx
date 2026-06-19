@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion as framerMotion } from 'framer-motion'
 import {
     FaCloud, FaRocket, FaCog, FaBrain, FaShieldAlt, FaSync
 } from 'react-icons/fa'
@@ -9,38 +9,38 @@ function Services() {
     const services = [
         {
             icon: <FaSync />,
-            title: 'DevOps Automation & CI/CD',
-            description: 'Build, test, and deploy with fully automated pipelines (CI/CD) and Infrastructure as Code (IaC) solutions to accelerate releases safely.',
+            title: <><span className="text-blood-red">D</span>evOps Automation &amp; CI/CD</>,
+            description: <>Build, test, and deploy with fully <span className="text-blood-red">automated pipelines</span> (CI/CD) and <span className="text-blood-red">Infrastructure as Code</span> (IaC) solutions to accelerate releases safely.</>,
             link: '/services/devops-automation'
         },
         {
             icon: <FaCloud />,
-            title: 'Legacy to Clouds & Private Clouds',
-            description: 'Migrate legacy infrastructure to public hyperscalers or secure private clouds, with a focus on region-specific data protection and residency compliance.',
+            title: <><span className="text-blood-red">L</span>egacy to Clouds &amp; Private Clouds</>,
+            description: <>Migrate legacy infrastructure to public hyperscalers or secure private clouds, with a focus on region-specific <span className="text-blood-red">data protection</span> and <span className="text-blood-red">residency compliance</span>.</>,
             link: '/services/cloud-migration'
         },
         {
             icon: <FaRocket />,
-            title: 'Application Modernization',
-            description: 'Transform legacy systems into modern, scalable cloud-native microservices architectures.',
+            title: <><span className="text-blood-red">A</span>pplication Modernization</>,
+            description: <>Transform <span className="text-blood-red">legacy systems</span> into modern, scalable cloud-native <span className="text-blood-red">microservices</span> architectures.</>,
             link: '/services/application-modernization'
         },
         {
             icon: <FaCog />,
-            title: 'Deterministic Automation (No-LLM)',
-            description: 'Implement local, secure automation agents that operate without LLM interventions, ensuring zero data leakage and 100% predictability.',
+            title: <><span className="text-blood-red">D</span>eterministic Automation (No-LLM)</>,
+            description: <>Implement local, secure <span className="text-blood-red">deterministic automation</span> agents that operate without LLM interventions, ensuring zero <span className="text-blood-red">data leakage</span> and 100% predictability.</>,
             link: '/services/advanced-automation'
         },
         {
             icon: <FaBrain />,
-            title: 'L1 Support AI Agents',
-            description: 'Deploy autonomous self-hosted AI agents to monitor logs, manage incidents, and resolve tier-1 service alerts in real-time.',
+            title: <><span className="text-blood-red">L</span>1 Support AI Agents</>,
+            description: <>Deploy autonomous self-hosted <span className="text-blood-red">AI agents</span> to monitor logs, manage incidents, and automatically <span className="text-blood-red">remediate alerts</span> in real-time.</>,
             link: '/services/ai-powered-devops'
         },
         {
             icon: <FaShieldAlt />,
-            title: 'Security & DevOps Assessments',
-            description: 'Conduct deep assessments of your cloud security posture, zero-trust configurations, and pipeline maturity compliance (SOC2/HIPAA).',
+            title: <><span className="text-blood-red">S</span>ecurity &amp; DevOps Assessments</>,
+            description: <>Conduct deep assessments of your cloud <span className="text-blood-red">security posture</span>, zero-trust configurations, and pipeline maturity <span className="text-blood-red">compliance audits</span> (SOC2/HIPAA).</>,
             link: '/services/devsecops'
         }
     ]
@@ -49,16 +49,16 @@ function Services() {
         <div className="page">
             <div className="page-hero">
                 <div className="container">
-                    <h1>Our Services</h1>
-                    <p className="lead">Comprehensive DevOps and Cloud Solutions</p>
+                    <h1>Our <span className="text-blood-red">S</span>ervices</h1>
+                    <p className="lead">Comprehensive <span className="text-blood-red">D</span>evOps and <span className="text-blood-red">C</span>loud Solutions</p>
                 </div>
             </div>
 
             <div className="container py-16">
                 <div className="services-overview-grid">
                     {services.map((service, index) => (
-                        <motion.div
-                            key={service.title}
+                        <framerMotion.div
+                            key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -69,10 +69,10 @@ function Services() {
                                     {service.icon}
                                 </div>
                                 <h3>{service.title}</h3>
-                                <p>{service.description}</p>
+                                <div style={{ fontSize: '1rem', color: 'var(--color-text-secondary)', marginBottom: 'var(--space-8)', lineHeight: 1.6 }}>{service.description}</div>
                                 <span className="service-arrow">Learn More →</span>
                             </Link>
-                        </motion.div>
+                        </framerMotion.div>
                     ))}
                 </div>
             </div>

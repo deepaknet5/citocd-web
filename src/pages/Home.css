@@ -50,6 +50,8 @@
     display: flex;
     gap: var(--space-4);
     flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
 }
 
 /* Hero Visual */
