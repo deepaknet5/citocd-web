@@ -18,8 +18,16 @@
     gap: var(--space-8);
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+}
+
 .logo img {
-    height: 50px;
+    height: 40px;
+    width: auto;
     transition: transform var(--transition-base);
     filter: grayscale(1) brightness(2.5) contrast(1.2);
 }

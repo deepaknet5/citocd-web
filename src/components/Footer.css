@@ -21,8 +21,9 @@
 }
 
 .footer-logo {
-    height: 50px;
-    margin-bottom: var(--space-4);
+    height: 40px;
+    width: auto;
+    display: block;
     filter: grayscale(1) brightness(2.5) contrast(1.2);
 }
 

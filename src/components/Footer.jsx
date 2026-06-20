@@ -11,7 +11,8 @@ function Footer() {
                 <div className="footer-content">
                     {/* Company Info */}
                     <div className="footer-section">
-                        <div className="footer-logo-container" style={{ marginBottom: 'var(--space-4)' }}>
+                        <div className="footer-logo-container" style={{ marginBottom: 'var(--space-4)', display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
+                            <img src="/assets/logd.png" alt="CItoCD Logo" className="footer-logo" />
                             <span className="brand-name" style={{ fontSize: '1.8rem', fontWeight: 900, letterSpacing: '-0.03em' }}>CItoCD</span>
                         </div>
                         <p className="footer-description">
