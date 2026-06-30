@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaArrowLeft } from 'react-icons/fa'
 import '../SharedPages.css'
+import SEO from '../../components/SEO'
 
 const keywordsToHighlight = [
   /\b(citocd)\b/gi,
@@ -99,6 +100,11 @@ export function createServicePage(config) {
   return function ServicePage() {
     return (
       <div className="page">
+        <SEO 
+          title={config.title}
+          description={config.subtitle || config.overview.substring(0, 155)}
+          keywords={`DevOps consultancy, Cloud architecture, ${config.title}, CI/CD automation, DevOps consulting, enterprise automation`}
+        />
         <Link to="/services" className="back-button" aria-label="Back to services">
           <FaArrowLeft />
         </Link>

@@ -9,6 +9,7 @@ import {
 import { SiAmazonwebservices, SiDocker, SiKubernetes } from 'react-icons/si'
 import { VscAzure } from 'react-icons/vsc'
 import './Home.css'
+import SEO from '../components/SEO'
 
 function Home() {
     const [activeFaq, setActiveFaq] = useState(null)
@@ -120,6 +121,11 @@ function Home() {
 
     return (
         <div className="home">
+            <SEO 
+                title="Revolutionizing DevOps & Cloud Consultancy" 
+                description="CItoCD is a premier DevOps consulting agency specializing in CI/CD automation, cloud migration, application modernization, DevSecOps, and AI-powered self-healing DevOps solutions."
+                keywords="DevOps consultancy, DevOps consulting services, CI/CD automation, Cloud migration, DevSecOps audits, Kubernetes consulting, AWS consulting, GCP consulting, Azure consulting"
+            />
             {/* Hero Section */}
             <section className="hero">
                 <div className="container">

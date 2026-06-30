@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaLaptopCode, FaServer, FaShieldAlt, FaBook, FaGoogle, FaStackOverflow, FaRobot } from 'react-icons/fa'
 import './SharedPages.css'
+import SEO from '../components/SEO'
 
 function About() {
   const teamStrengths = [
@@ -49,6 +50,11 @@ function About() {
 
   return (
     <div className="page">
+      <SEO 
+        title="About Us - DevOps & SRE Experts" 
+        description="Discover the team behind CItoCD. We bring decades of expertise in high-scale microservices, continuous delivery, zero-trust cloud security, and self-healing automation."
+        keywords="About CItoCD, DevOps engineers, SRE specialists, cloud architects, DevSecOps specialists, container orchestration experts"
+      />
       <div className="page-hero">
         <div className="container">
           <motion.h1

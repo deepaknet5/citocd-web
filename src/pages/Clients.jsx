@@ -1,5 +1,6 @@
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import './SharedPages.css'
+import SEO from '../components/SEO'
 
 const clientsData = [
   {
@@ -46,6 +47,11 @@ const clientsData = [
 function Clients() {
   return (
     <div className="page">
+      <SEO 
+        title="Our Clients & Success Stories" 
+        description="Discover how CItoCD partners with industry leaders to implement secure DevOps, cloud architecture, and automation systems that scale."
+        keywords="CItoCD client portfolio, DevOps client reviews, enterprise DevOps consulting cases, cloud migration case studies"
+      />
       <div className="page-hero">
         <div className="container">
           <h1><span className="text-blood-red">O</span>ur <span className="text-blood-red">C</span>lients</h1>

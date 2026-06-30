@@ -4,6 +4,7 @@ import {
     FaCloud, FaRocket, FaCog, FaBrain, FaShieldAlt, FaSync
 } from 'react-icons/fa'
 import './SharedPages.css'
+import SEO from '../components/SEO'
 
 function Services() {
     const services = [
@@ -47,6 +48,11 @@ function Services() {
 
     return (
         <div className="page">
+            <SEO 
+                title="Our Services - Enterprise DevSecOps & Cloud Consulting" 
+                description="Explore our specialized DevOps consulting services, including CI/CD automation, cloud migration, application modernization, DevSecOps compliance assessments, and self-healing AI operations."
+                keywords="DevOps services, cloud migration consultancy, DevSecOps consulting, CI/CD pipeline automation, Kubernetes containerization, IT automation"
+            />
             <div className="page-hero">
                 <div className="container">
                     <h1>Our <span className="text-blood-red">S</span>ervices</h1>

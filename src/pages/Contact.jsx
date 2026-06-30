@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa'
 import './SharedPages.css'
+import SEO from '../components/SEO'
 
 function Contact() {
   const [status, setStatus] = useState('')
@@ -37,6 +38,11 @@ function Contact() {
 
   return (
     <div className="page">
+      <SEO 
+        title="Contact Us - Start Your DevOps Consultancy Project" 
+        description="Get in touch with the DevOps consulting team at CItoCD. Request a free cloud assessment, quote a custom CI/CD automation workflow, or hire DevSecOps specialists."
+        keywords="Contact CItoCD, DevOps consulting quote, hire DevSecOps consultants, cloud migration help, continuous delivery consultation"
+      />
       <div className="page-hero section">
         <div className="container">
           <h1 className="text-gradient"><span className="text-blood-red">G</span>et <span className="text-blood-red">I</span>n <span className="text-blood-red">T</span>ouch</h1>
